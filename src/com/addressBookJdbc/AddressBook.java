@@ -4,7 +4,7 @@ import java.util.List;
 
 public class AddressBook {
 	private AddressBookDB addressBookDB;
-	private List<PersonInformation> contactList;
+	private List<PersonInformation> contacts;
 
 	
 	public enum IOService {
@@ -17,9 +17,9 @@ public class AddressBook {
 
 	public List<PersonInformation> readContactData(IOService ioService) {
 		if (ioService.equals(IOService.DB_IO))
-			this.contactList = addressBookDB.readData();
-		System.out.println(this.contactList);
-		return this.contactList;
+			this.contacts = addressBookDB.readData();
+		System.out.println(this.contacts);
+		return this.contacts;
 	}
 
 }
